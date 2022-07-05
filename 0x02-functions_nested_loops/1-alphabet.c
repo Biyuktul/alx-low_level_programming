@@ -18,9 +18,3 @@ _putchar(i);
 }
 _putchar('\n');
 }
-
-int main(void)
-{
-
-return (0);
-}
