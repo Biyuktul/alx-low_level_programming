@@ -9,7 +9,7 @@
  * Return: Always abs(n).
  */
 
-int _abs(int)
+int _abs(int n)
 {
 
 return (abs(n));
