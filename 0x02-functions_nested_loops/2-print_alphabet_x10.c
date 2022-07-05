@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * main- Entry point
+ * print_alphabet_x10 - a-z 10x
  *
- * Return: On success 0.
+ * main - Entry point
+ *
+ * Return: Always void.
  */
 
 void print_alphabet_x10(void)
@@ -11,7 +13,7 @@ void print_alphabet_x10(void)
 int i;
 int j;
 
-for (j=0; j<10; j++)
+for (j = 0; j < 10; j++)
 {
 for (i = 97; i < 123; i++)
 {
