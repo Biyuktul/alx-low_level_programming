@@ -3,7 +3,7 @@
 /**
  * _islower - returns true if c is lower
  *
- * c - the character to be checked
+ * @c: the character to be checked
  *
  * main - Entry point
  *
