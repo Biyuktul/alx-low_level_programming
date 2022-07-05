@@ -1,3 +1,5 @@
+#include <ctype.h>
+
 /**
  * _islower - returns true if char is lower
  *
