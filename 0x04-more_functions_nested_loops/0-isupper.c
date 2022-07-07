@@ -2,8 +2,9 @@
 #include <ctype.h>
 
 /**
- * _isupper - check for upper case character
- * @c : character to be checked
+ * _isupper - check for uppercase
+ *
+ * @c: character to be checked
  *
  * Return: 1 if upper and otherwise 0
  */
