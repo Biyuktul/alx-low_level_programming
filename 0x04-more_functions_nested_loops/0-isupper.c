@@ -9,8 +9,6 @@
  * Return: 1 if upper and otherwise 0
  */
 
-int main(void)
-{
 int _isupper(int c)
 {
 	if (isupper(c))
@@ -21,5 +19,4 @@ int _isupper(int c)
 	{
 		return (0);
 	}
-}
 }
