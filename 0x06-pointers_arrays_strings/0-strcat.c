@@ -31,6 +31,7 @@ while (src[k] != '\0')
 	dest[dest_len + k] = src[k];
 	k++;
 }
+dest[dest_len] = '\0';
 
 return (dest);
 }
