@@ -25,13 +25,15 @@ dest_len++;
 j++;
 }
 
-int k = 0;
-while (src[k] != '\0')
+int k;
+for (k = 0; src[k] != '\0'; dest_len++, k++)
 {
-	dest[dest_len + k] = src[k];
-	k++;
+dest[dest_len] = src[k];
 }
 dest[dest_len] = '\0';
+
+return (dest);
+}
 
 return (dest);
 }
