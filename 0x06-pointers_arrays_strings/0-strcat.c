@@ -26,11 +26,11 @@ j++;
 }
 
 int k = 0;
-while (k < src_len)
+while (src[k] != '\0')
 {
-dest[dest_len + k] = src[k];
-k++;
+	dest[dest_len + k] = src[k];
+	k++;
 }
-dest[dest_len + src_len] = '\0';
+
 return (dest);
 }
