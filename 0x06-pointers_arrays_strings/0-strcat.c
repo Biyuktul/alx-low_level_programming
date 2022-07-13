@@ -31,4 +31,5 @@ while (k < src_len)
 dest[dest_len + k] = src[k];
 k++;
 }
+return (dest);
 }
