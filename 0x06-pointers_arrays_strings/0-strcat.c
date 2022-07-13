@@ -31,8 +31,6 @@ for (k = 0; src[k] != '\0'; dest_len++, k++)
 dest[dest_len] = src[k];
 }
 dest[dest_len] = '\0';
-
-return (dest);
 }
 
 return (dest);
