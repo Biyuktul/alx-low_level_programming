@@ -15,20 +15,22 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int initial_length = 0;
 	unsigned int found_match, i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
 		found_match = 0;
 
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; accept[j] != 0; j++)
 		{
 			if (s[i] == accept[j])
 			{
 				found_match = 1;
-				initial_length++;
+				break;
 			}
 		}
-		if (found_match == 0)
-			return (initial_length);
+		if (found_match)
+			initial_length++;
+		else
+			break;
 	}
 
 	return (initial_length);
