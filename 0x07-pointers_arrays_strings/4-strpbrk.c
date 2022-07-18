@@ -11,33 +11,16 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j = 0, pos = 0, match_found = 0;
+int i, n;
 
-	while (*(s + i))
-		i++;
-
-	pos = i;
-	i = 0;
-	while (*(accept + i))
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		j = 0;
-		while (*(s + j))
+		for (n = 0; accept[n] != '\0'; n++)
 		{
-			if (accept[i] == s[j])
-			{
-				if (j <= pos)
-				{
-					pos = j;
-					match_found = 1;
-				}
-			}
-			j++;
+			if (s[i] == accept[n])
+				return (s + i);
 		}
-		i++;
 	}
 
-	if (match_found == 1)
-		return (&s[pos]);
-
-	return (NULL);
+	return (NULL)
 }
