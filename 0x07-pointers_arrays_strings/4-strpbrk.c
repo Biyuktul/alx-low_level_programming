@@ -9,7 +9,7 @@
  * matches one of the characters in accept, else returns NULL.
  */
 
-ar *_strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 int a = 0, b;
 
