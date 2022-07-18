@@ -9,24 +9,22 @@
  *
  */
 
-char *_strstr(char *haystack, char *needle)
+ar *_strstr(char *haystack, char *needle)
 {
-if (*needle == '\0')
-{
-return (haystack);
-}
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *str1 = haystack;
+		char *str2 = needle;
 
-for (i = 0; i < haystack[i] != '\0'; i++)
-{
-if (*(haystack + i) == *needle)
-{
-char *ptr = _strstr(haystack + i + 1, needle + 1);
-if (ptr)
-{
-return (ptr - 1);
-}
-return (NULL);
-}
-}
-return (NULL);
+		while (*str == *str2 && *str2 != '\0')
+		{
+			str1++;
+			str2++;
+		}
+
+		if (*str2 == '\0')
+			return (haystack);
+	}
+
+	return (NULL);
 }
