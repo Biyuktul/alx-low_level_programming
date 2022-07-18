@@ -12,13 +12,13 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	size_t initial_length = 0;
+	unsigned int initial_length = 0;
 
-	for (size_t i = 0; s[i] != 0; i++)
+	for (unsigned int i = 0; s[i] != 0; i++)
 	{
-		int found_match = 0;
+		unsigned int found_match = 0;
 
-		for (size_t j = 0; accept[j] != 0; j++)
+		for (unsigned int j = 0; accept[j] != 0; j++)
 		{
 			if (s[i] == accept[j])
 			{
