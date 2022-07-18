@@ -24,13 +24,11 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				found_match = 1;
-				break;
+				initial_length++;
 			}
 		}
-		if (found_match)
-			initial_length++;
-		else
-			break;
+		if (found_match == 0)
+			return (initial_length);
 	}
 
 	return (initial_length);
