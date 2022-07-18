@@ -9,18 +9,25 @@
  * matches one of the characters in accept, else returns NULL.
  */
 
-char *_strpbrk(char *s, char *accept)
+ar *_strpbrk(char *s, char *accept)
 {
-int i, n;
+int a = 0, b;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		for (n = 0; accept[n] != '\0'; n++)
-		{
-			if (s[i] == accept[n])
-				return (s + i);
-		}
-	}
+while (s[a])
+{
+b = 0;
 
-	return (NULL);
+while (accept[b])
+{
+if (s[a] == accept[b])
+{
+s += a;
+return (s);
+}
+b++;
+}
+
+a++;
+}
+return ('\0');
 }
