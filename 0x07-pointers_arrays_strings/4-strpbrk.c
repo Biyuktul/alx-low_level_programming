@@ -22,5 +22,5 @@ int i, n;
 		}
 	}
 
-	return (NULL)
+	return (NULL);
 }
