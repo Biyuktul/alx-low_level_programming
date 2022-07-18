@@ -2,7 +2,7 @@
 
 /**
  * _memset - sets memory location to b
- * @s - memory address that we want to set
+ * @s: - memory address that we want to set
  * @b: the character to be set
  * @n: number of bytes
  *
