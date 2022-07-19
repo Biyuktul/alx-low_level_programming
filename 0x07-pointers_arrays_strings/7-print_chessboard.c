@@ -1,24 +1,19 @@
 #include "main.h"
-/**
-* print_chessboard - prints the chessboard
-* @a: row
-* Return: void
-*/
-void print_chessboard(char (*a)[8])
-{
-int i, j;
 
-for (i = 0; i < 8; i++)
+/**
+ * print_chessboard - prints the chessboard
+ * @a: number of rows
+ * Return: Void
+ */
+
+void print_essboard(char (*a)[8])
 {
-for (j = 0; j < 8; j++)
-{
-if (j == 7)
-{
-_putchar(a[i][j]);
-_putchar('\n');
-}
-else
-_putchar(a[i][j]);
-}
-}
+	int i, n;
+
+	for (i = 0; i < 8; i++)
+	{
+		for (n = 0; n < 8; n++)
+			_putchar(a[i][n]);
+		_putchar('\n');
+	}
 }
