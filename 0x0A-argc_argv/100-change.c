@@ -1,70 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
-
-int change(int cents);
-
 /**
- * main - Entry Point
- * @argc: number of arguments
- * @argv: array pointing to arguments
- * Return: Always (0) at success
- */
-
+*main -> this fun for printing name
+* @argc: parameter
+* @argv: parameter 2
+* Return: 0 for success
+*/
 int main(int argc, char *argv[])
 {
-	if (argc != 1)
-	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	else if (argc < 0)
-	{
-		printf("%d\n", 0);
-	}
-
-	printf("%d\n", change(atoi(argv[1])));
-	return (0);
-}
-
-/**
- * change - get change
- * @cents: amount of coins from main function
- * Return: change
- */
-
-int change(int cents)
+int num, j, result = 0;
+int coins[] = {25, 10, 5, 2, 1};
+if (argc != 2)
 {
-	int q = 25, d = 10, n = 5, t = 2, p = 1;
-	int coins;
-
-	while (cents > 0)
-	{
-		while (cents >= q)
-		{
-			cents -= q;
-			coins++;
-		}
-		while (cents >= d)
-		{
-			cents -= d;
-			coins++;
-		}
-		while (cents >= n)
-		{
-			cents -= n;
-			coins++;
-		}
-		while (cents >= t)
-		{
-			cents -= t;
-			coins++;
-		}
-		while (cents >= p)
-		{
-			cents -= p;
-			coins++;
-		}
-	}
-	return (coins);
+printf("%s\n", "Error");
+return (1);
+}
+num = atoi(argv[1]);
+if (num < 0)
+{
+printf("0\n");
+return (0);
+}
+for (j = 0; j < 5 && num >= 0; j++)
+{
+while (num >= coins[j])
+{
+num -= coins[j];
+result++;
+}
+}
+printf("%d\n", result);
+return (0);
 }
