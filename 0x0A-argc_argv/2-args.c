@@ -6,14 +6,17 @@
  * @argc: arguments
  * @argv: array pointing to arguments
  * Return: 0
+ *
  */
 
 int main(int argc, char *argv[])
 {
+	int count = 0;
 
-	while (argc--)
+	while (count < argc)
 	{
-		printf("%s\n", argv[argc]);
+		printf("%s\n", argv[count]);
+		count++;
 	}
 	return (0);
 }
