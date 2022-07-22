@@ -13,14 +13,14 @@ int change(int cents);
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
+	if (argc != 1)
 	{
 		printf("%s\n", "Error");
 		return (1);
 	}
 	else if (argc < 0)
 	{
-		return (0);
+		printf("%d\n", 0);
 	}
 
 	printf("%d\n", change(atoi(argv[1])));
