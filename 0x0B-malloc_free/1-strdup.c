@@ -14,6 +14,7 @@ char *_strdup(char *str)
 {
 	unsigned int len;
 	int i;
+	char *a;
 
 	for (len = 0; str[len] != '\0'; len++)
 	{
@@ -21,7 +22,7 @@ char *_strdup(char *str)
 
 	if (str == 0)
 		return (0);
-	char a[] = malloc(len);
+	a = malloc(len);
 	i = 0;
 	while (str[i])
 	{
@@ -31,6 +32,7 @@ char *_strdup(char *str)
 	a[i] = '\0';
 	if (a == 0)
 		return (0);
-	return (a);
+	else
+		return (a);
 	free(a);
 }
