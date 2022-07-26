@@ -8,7 +8,7 @@ I've learned to dynamically allocate memory in my C program using standard libra
 ## TASKS
 
 0. Write a function that creates an array of chars, and initializes it with a specific char.
- - Prototype:```char *create_array(unsigned int size, char c);```
+  - Prototype:```char *create_array(unsigned int size, char c);```
  - Returns NULL if ```size = 0```
  - Returns a pointer to the array, or NULL if it fails
 1. Write a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
