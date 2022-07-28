@@ -5,13 +5,12 @@
  * @b: size of chunk of memory to be allocated
  * Return: a pointer to the address of the memory block
  */
-
 void *malloc_checked(unsigned int b)
 {
 	void *p;
 
 	p = malloc(b);
-	if (p == 0)
+	if (p == NULL)
 		exit(98);
 	return (p);
 }
