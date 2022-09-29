@@ -4,7 +4,7 @@
  * add_dnodeint_end - adds a node to the end of a list
  * @head: pointer to the first element in the list
  * @n: member data of the structure dlistint_t
- * Returns: address to the new node or NULL if failed
+ * Return: address to the new node or NULL if failed
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
