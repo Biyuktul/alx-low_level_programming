@@ -4,7 +4,7 @@
 
 /**
  * dlistint_len - a function to print length of a list
- * h: pointer to the start of a list
+ * @h: pointer to the start of a list
  * Return: number of element visited
 */
 
