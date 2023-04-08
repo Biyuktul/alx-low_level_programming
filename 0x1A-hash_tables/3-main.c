@@ -12,6 +12,8 @@ int main(void)
 {
     hash_table_t *ht;
     long unsigned int i;
+    hash_node_t *head;
+
     ht = hash_table_create(10);
     hash_table_set(ht, "hetairas", "yonatan");
     hash_table_set(ht, "mentioner", "biyuktul");
@@ -30,8 +32,19 @@ int main(void)
     {
         if (ht->array[i] == NULL)
                 printf("array[%ld] ==> NULL \n", i);
+        else if (ht->array[i]->next != NULL)
+        {
+            head = ht->array[i];
+            while (head)
+            {
+                printf("array[%ld] ==> %s  : ", i, head->value);
+                head = head->next;
+            }
+            printf("\n");
+        }
         else
-                printf("array[%ld] ==> %s \n", i, ht->array[i]->value);
+                printf("array[%ld] ==> %s  \n", i, ht->array[i]->value);
+                
     }
     return (EXIT_SUCCESS);
 }

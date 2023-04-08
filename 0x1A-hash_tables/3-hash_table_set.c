@@ -23,8 +23,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->value = (char *)value;
 	new_node->next = NULL;
 	index = key_index((const unsigned char *)key, ht->size);
-	printf("%ld \n", index);
-	ht->array[index] = new_node;
-	
+
+	if (ht->array[index] == NULL)
+		ht->array[index] = new_node;
+	else
+		ht->array[index]->next = new_node;
 	return (1);
 }
