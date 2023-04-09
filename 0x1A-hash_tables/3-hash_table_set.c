@@ -27,12 +27,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 
 	if (ht->array[index] == NULL)
+	{
 		ht->array[index] = new_node;
+		return (1);
+	}
 	else
 	{
 		temp = ht->array[index];
 		ht->array[index] = new_node;
 		new_node->next = temp;
+		return (1);
 	}
-	return (1);
 }
