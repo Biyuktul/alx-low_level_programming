@@ -26,6 +26,9 @@ int main(void)
     hash_table_set(ht, "cow", "fuaiiffff");
     hash_table_set(ht, "parrot", "hataadir");
     hash_table_set(ht, "bird", "teteass");
+    hash_table_set(ht, "Holberton", "is cool");
+    hash_table_set(ht, "Holberton", "is soooo cooool"); 
+    hash_table_set(ht, "Holberton", "is awesome");
 
 
     for (i = 0; i < ht->size; i++)
