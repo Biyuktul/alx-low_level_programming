@@ -38,9 +38,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		int exists = key_exists(ht->array[index], key);
 
 		if (exists)
-			return (0);
-		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
+			ht->array[index]->value = new_node->value;
+		else
+		{
+			new_node->next = ht->array[index];
+			ht->array[index] = new_node;
+		}
 	}
 	return (1);
 }
