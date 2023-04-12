@@ -21,9 +21,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || value == NULL || *(key) == '\0'
 	|| *(value) == '\0' || strlen(key) == 0)
 		return (0);
+	
 	new_node = malloc(sizeof(hash_node_t));
+
 	if (!new_node)
 		return (0);
+	
 	new_node->key = strdup(key);
 	new_node->value = strdup(value ? value : "");
 	new_node->next = NULL;
@@ -36,32 +39,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		int exists = key_exists(ht->array[index], key);
-
-		if (exists)
-			ht->array[index]->value = new_node->value;
-		else
-		{
 			new_node->next = ht->array[index];
 			ht->array[index] = new_node;
-		}
 	}
 	return (1);
-}
-
-/**
- * key_exists - function to check if a key already exists in the chain
- * @head: pointer to the start of the chain
- * @key: the key to be checked
- * Return: 1 if exists, 0 otherwise
-*/
-int key_exists(hash_node_t *head, const char *key)
-{
-	while (head)
-	{
-		if (strcmp(head->key, key) == 0)
-			return (1);
-		head = head->next;
-	}
-	return (0);
 }
