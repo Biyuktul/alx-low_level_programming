@@ -26,5 +26,5 @@ To use the hashtable implementation, follow these steps:
 
 
 ## Author
-Yonatan Addis.
+Yonatan Addis. <br>
 LinkedIn: [Click here](https://www.linkedin.com/in/yonatan-addis-15a86a213/)
