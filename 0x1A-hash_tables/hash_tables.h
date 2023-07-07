@@ -13,8 +13,8 @@
  */
 typedef struct hash_node_s
 {
-	char *key;
-	char *value;
+	const char *key;
+	const char *value;
 	struct hash_node_s *next;
 } hash_node_t;
 
