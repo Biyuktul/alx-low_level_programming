@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *hashNode = NULL;
 	unsigned long int index;
 
-	if (!key || !value)
+	if (!key || !value || !ht)
 		return (0);
 	hashNode = malloc(sizeof(hash_node_t));
 	if (!hashNode)
@@ -28,6 +28,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
+		if (ht->array[index]->key == key)
+		{
+			ht->array[index]->key = (char *)key;
+			ht->array[index]->value = (char *)value;
+			return (1);
+		}
 		hashNode->next = ht->array[index];
 		ht->array[index] = hashNode;
 		return (1);
